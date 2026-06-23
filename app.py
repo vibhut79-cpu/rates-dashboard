@@ -95,7 +95,8 @@ def fetch_ccil_tenor_yields() -> pd.DataFrame:
 
 
 @st.cache_data(ttl=3600)
-@st.cache_data(ttl=3600) def fetch_ccil_sdl_spreads():     return pd.DataFrame() -> pd.DataFrame:
+def fetch_ccil_tenor_yields():
+    return pd.DataFrame()
     """
     Scrape the CCIL State Government Spread Analysis page.
     URL: https://www.ccilindia.com/state-government-spread-analysis
