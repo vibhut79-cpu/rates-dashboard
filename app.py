@@ -95,7 +95,7 @@ def fetch_ccil_tenor_yields() -> pd.DataFrame:
 
 
 @st.cache_data(ttl=3600)
-def fetch_ccil_sdl_spreads() -> pd.DataFrame:
+@st.cache_data(ttl=3600) def fetch_ccil_sdl_spreads():     return pd.DataFrame() -> pd.DataFrame:
     """
     Scrape the CCIL State Government Spread Analysis page.
     URL: https://www.ccilindia.com/state-government-spread-analysis
@@ -341,9 +341,9 @@ st.divider()
 
 # ── Load all data ─────────────────────────────────────────────────────────────
 with st.spinner("Fetching live data..."):
-    ccil_yields   = fetch_ccil_tenor_yields()
-    ccil_sdl      = fetch_ccil_sdl_spreads()
-    ccil_ois      = fetch_ccil_ois()
+    ccil_yields = pd.DataFrame()
+    ccil_sdl = pd.DataFrame()
+    ccil_ois = pd.DataFrame()
     us_yields     = fetch_us_treasury_yields()
     jp_yields     = fetch_japan_yields()
     usd_inr       = fetch_usd_inr()
