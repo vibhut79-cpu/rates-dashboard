@@ -110,7 +110,7 @@ india10y = None
 india5y = None
 tbill91 = None
 
-rbi_repo = 5.50
+rbi_repo = 5.25
 
 # -----------------------------
 # HEADER
